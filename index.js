@@ -26,9 +26,10 @@ function viewCart() {
         
     }
     else {
-      s2 += `${cart[0][key]} at $${cart[0][value]}.`;
+      s2 += `${cart[0].itemName} at $${cart[0].itemPrice}.`;
     }
     
+    return s2;
   }
   else {
     return s1;
