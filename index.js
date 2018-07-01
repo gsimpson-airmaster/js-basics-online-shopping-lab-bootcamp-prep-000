@@ -53,14 +53,24 @@ function total() {
 
 function removeFromCart(item) {
   var flag = false;
+  var updCart = [];
   for(var i = 0;i<cart.length; i++) {
     if(cart[0].itemName === item) {
       flag = true;
-      Array.prototype.splice()
+      updCart = cart.splice(i,1)
     }
+  }
+  if(flag === true) {
+    return updCart;
+  }
+  else {
+    return `That item is not in your cart`;
   }
 }
 
 function placeOrder(cardNumber) {
-  // write your code here
+  if(cardNumber != null) {
+    return `Your total cost is $${total()}, which will be charged to the card ${cardNumber}.`;
+  }
+  return `
 }
