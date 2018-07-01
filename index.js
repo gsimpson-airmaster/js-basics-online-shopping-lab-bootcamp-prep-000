@@ -52,7 +52,13 @@ function total() {
 }
 
 function removeFromCart(item) {
-  // write your code here
+  var flag = false;
+  for(var i = 0;i<cart.length; i++) {
+    if(cart[0].itemName === item) {
+      flag = true;
+      Array.prototype.splice()
+    }
+  }
 }
 
 function placeOrder(cardNumber) {
