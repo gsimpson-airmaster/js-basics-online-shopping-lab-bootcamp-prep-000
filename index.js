@@ -54,7 +54,6 @@ function total() {
 function removeFromCart(item) {
   var flag = false;
   var updCart = [];
-  console.log(`Removing ${item} from cart.`);
   for(var i = 0;i<cart.length; i++) {
     if(cart[0].itemName === item) {
       flag = true;
