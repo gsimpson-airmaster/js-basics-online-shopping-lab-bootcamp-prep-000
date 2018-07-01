@@ -23,7 +23,14 @@ function viewCart() {
   var s2 = "In your cart, you have ";
   if(cart.length > 0){
     if(cart.length > 1) {
-        
+        for(var i = 0; i < cart.length;i++){
+          if(i === cart.length - 1) {
+            s2 += `and ${cart[i].itemName} at $${cart[i].itemPrice}.`;
+          }
+          else {
+            s2 += `${cart[i].itemName} at $${cart[i].itemPrice},`;
+          }
+        }
     }
     else {
       s2 += `${cart[0].itemName} at $${cart[0].itemPrice}.`;
